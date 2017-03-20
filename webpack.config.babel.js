@@ -26,12 +26,16 @@ module.exports = {
         test: /\.jsx$/,
         exclude: /node_modules/,
         loader: 'eslint-loader'
+      },
+      {
+        test: /\.css$/,
+        loaders: 'style-loader!css-loader?modules!postcss-loader'
       }
     ]
   },
 
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.css']
   },
 
   plugins: [

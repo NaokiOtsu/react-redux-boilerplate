@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react';
+import style from './style.css';
 
 const Counter = ({ count, onIncrement, onDecrement }) => (
   <div>
-    <p>{ count }</p>
+    <p className={style.hoge}>{ count }</p>
     <button onClick={() => onIncrement()}>increment</button>
     <button onClick={() => onDecrement()}>decrement</button>
   </div>

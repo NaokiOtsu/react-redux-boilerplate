@@ -1,0 +1,7 @@
+.hoge {
+  margin: 0;
+  padding: 0;
+  color: red;
+  transition: all .5s;
+  display: flex;
+}

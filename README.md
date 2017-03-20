@@ -1,13 +1,15 @@
 # react-redux-boilerplate
-React + ReduxのBoilerplate
+React + Redux Boilerplate
 
 ## Features
-React
-Redux
-Babel
-ES2015
-ESLint
-webpack
+React  
+Redux  
+Babel  
+ES2015  
+ESLint  
+webpack  
+CSS Modules  
+PostCSS(autoprefixer)  
 
 ## Install
 
