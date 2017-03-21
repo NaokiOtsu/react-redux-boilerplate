@@ -6,6 +6,7 @@ const Counter = ({ count, onIncrement, onDecrement }) => (
     <p className={style.hoge}>{ count }</p>
     <button onClick={() => onIncrement()}>increment</button>
     <button onClick={() => onDecrement()}>decrement</button>
+    <img src={'./images/sample.png'} alt="sample" />
   </div>
 );
 

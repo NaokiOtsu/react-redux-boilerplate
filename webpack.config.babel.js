@@ -5,15 +5,13 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 const src = path.join(__dirname, 'src');
 const dist = path.join(__dirname, 'dist');
 
-module.exports = {
+const config = {
   entry: src + '/app.jsx',
 
   output: {
     path: dist,
     filename: 'bundle.js'
   },
-
-  devtool: 'inline-source-map',
 
   module: {
     loaders: [
@@ -29,7 +27,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: 'style-loader!css-loader?modules!postcss-loader'
+        loader: 'style-loader!css-loader?modules!postcss-loader'
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
       }
     ]
   },
@@ -49,6 +55,19 @@ module.exports = {
           configFile: './.eslintrc.json'
         }
       }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
     })
   ]
 };
+
+if (process.env.NODE_ENV === "production") {
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+} else {
+  config.devtool = 'inline-source-map';
+}
+
+module.exports = config;
