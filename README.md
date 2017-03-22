@@ -9,7 +9,7 @@ ES2015
 ESLint  
 webpack  
 CSS Modules  
-PostCSS(autoprefixer)  
+PostCSS  
 
 ## Install
 
