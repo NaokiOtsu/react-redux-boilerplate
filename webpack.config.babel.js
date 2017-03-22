@@ -32,10 +32,6 @@ const config = {
       {
         test: /\.(png|jpg|jpeg|gif|svg)/,
         loader: 'file-loader'
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
       }
     ]
   },

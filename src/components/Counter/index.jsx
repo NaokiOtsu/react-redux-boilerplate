@@ -1,12 +1,14 @@
 import React, { PropTypes } from 'react';
 import style from './style.css';
+import ImageSample from './sample.png';
 
 const Counter = ({ count, onIncrement, onDecrement }) => (
   <div>
     <p className={style.hoge}>{ count }</p>
     <button onClick={() => onIncrement()}>increment</button>
     <button onClick={() => onDecrement()}>decrement</button>
-    <img src={'./images/sample.png'} alt="sample" />
+    <div style={{ marginTop: '10px' }}><img src={ImageSample} alt="sample" /></div>
+    <div className={style.fuga}>fuga</div>
   </div>
 );
 
